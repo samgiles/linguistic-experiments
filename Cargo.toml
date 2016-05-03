@@ -1,0 +1,8 @@
+[package]
+name = "linguistic-experiments"
+version = "0.1.0"
+authors = ["Sam Giles <sam.e.giles@gmail.com>"]
+
+[dependencies]
+unicode-segmentation = "0.1.2"
+ndarray = "0.5.1"
