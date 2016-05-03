@@ -6,5 +6,6 @@ extern crate unicode_segmentation;
 extern crate ndarray;
 
 mod minimum_edit_distance;
+mod tokenize;
 
 pub use minimum_edit_distance::*;
