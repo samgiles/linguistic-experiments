@@ -16,7 +16,7 @@ pub fn english_clitic_expand<'a>(token: Token<'a>) -> Vec<Token<'a>> {
             if let Some(captures) = _ENG_ENCLITIC_REX.captures(word) {
                 if let Some(first_cap) = captures.at(1) {
                     if let Some(second_cap) = captures.at(2) {
-                        vec![
+                        return vec![
                             Token::new(
                                 TokenType::Str(first_cap),
                                 token.byte_index
@@ -26,15 +26,11 @@ pub fn english_clitic_expand<'a>(token: Token<'a>) -> Vec<Token<'a>> {
                                 token.byte_index + captures.pos(2).unwrap().0
                             ),
                         ]
-                    } else {
-                        vec![token]
                     }
-                } else {
-                    vec![token]
                 }
-            } else {
-                vec![token]
             }
+
+            vec![token]
         },
         _ => vec![token]
     }
