@@ -4,5 +4,7 @@ version = "0.1.0"
 authors = ["Sam Giles <sam.e.giles@gmail.com>"]
 
 [dependencies]
-unicode-segmentation = "0.1.2"
+lazy_static = "0.2.1"
 ndarray = "0.5.1"
+regex = "0.1"
+unicode-segmentation = "0.1.2"
